@@ -5,10 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Loja - Registrar</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 	<%@include file="menu.jsp"%>
-	<h1>Registrar</h1>
+	<br>
+	<h2>Cadastro</h2>
 	<form action="RegistraController" method="post">
 		<table>
 
@@ -28,13 +30,10 @@
 				<td>Endereco</td>
 				<td><input type="text" name="endereco"></td>
 			</tr>
-			<tr>
-				<td><input type="submit" value="Enviar"></td>
-				<td></td>
-			</tr>
-
-
-			</form>
+			
+				
+		</form>
 		</table>
+		<input type="submit" value="Enviar" class="button">
 </body>
 </html>

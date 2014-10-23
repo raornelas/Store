@@ -22,12 +22,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Alterar produto</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 <%@include file="menu.jsp" %>
-	<h1>Alterar</h1>
 	<br>
-	<br>
+	<h2>Alterar</h2>
 	<%
 		// Recupera id enviado por gerencia_produtos.jsp
 		String id = request.getParameter("id");

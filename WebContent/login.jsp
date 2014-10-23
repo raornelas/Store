@@ -5,11 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 	<%@include file="menu.jsp"%>
-	<h1>Login</h1>
 	<br>
+	<h2>Login</h2>
 	<form action="LoginController" method="post">
 		<table>
 			<tr>
@@ -20,10 +21,8 @@
 				<td>Senha:</td>
 				<td><input type="password" name="password" size="10"></td>
 			</tr>
-			<tr>
-				<td><input type="submit" value="Entrar" /></td>
-			</tr>
 		</table>
+		<input class="button" type="submit" value="Entrar" />
 	</form>
 </body>
 </html>

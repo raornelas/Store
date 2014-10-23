@@ -21,14 +21,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Loja</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 	<%@include file="menu.jsp"%>
-	<h1>Histórico</h1>
 	<br>
-	<br>
-	<table border="1" cellpadding="5">
-		<tr bgcolor="#E0E0E0">
+	<h2>Compras</h2>
+	<table>
+			<thead>
+		<tr class="title">
 			<th>Produto</th>
 			<th>Quantidade</th>
 			<th>Valor da compra</th>
@@ -37,6 +38,7 @@
 			<th>Cartão</th>
 
 		</tr>
+		</thead>
 		<%
 			// Recupera id de usuário dado nome
 			try {
@@ -91,6 +93,6 @@
 				e.printStackTrace();
 			}
 		%>
-	
+</table>	
 </body>
 </html>

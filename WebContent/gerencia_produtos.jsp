@@ -21,28 +21,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Loja</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 <%@include file="menu.jsp" %>
 
-	<h1>Produtos</h1>
-	
-	<h3><a href="adicionaproduto.jsp">Adicionar novo produto</a></h3>
 	<br>
+	<h2>Estoque</h2>
 	
-	<h3>Estoque</h3>
+	<a href="adicionaproduto.jsp">Adicionar novo produto</a>
+	<br><br>	
+	
 
 	
-	<table border="1"  cellpadding="5">
-	<tr bgcolor="#E0E0E0">
+	<table>
+	<thead>
+		<tr class="title">
 		<th> Produto</th>
 		<th> Preço</th>
 		<th> Estoque</th>
 		<th> Alterar</th>
 		<th> Excluir </th>
-
+	
 		
 	</tr>
+	</thead>
 		<%
 			// Busca por todos os produtos e adiciona em lista
 			List<Produto> lista = new ArrayList<Produto>();
@@ -69,11 +72,13 @@
 		<td><%= p.getNome()%> </td>
 		<td><%= df.format(p.getPreco_unitario()) %> </td>
 		<td><%= p.getQtde_estoque() %> </td>
-		<td><a href="altera_produto.jsp?id=<%=p.getId()%>">Alterar</a></td>
-		<td><a href="ProdutoController?acao=excluir&produto=<%=p.getId()%>">Exluir</a></td>
+		
+		<td><a href="altera_produto.jsp?id=<%=p.getId()%>"  class="label">Alterar</a></td>
+		<td><a href="ProdutoController?acao=excluir&produto=<%=p.getId()%>"  class="label">Exluir</a></td>
 	</tr>
 		<%
 			}
 		%>
+		</table>
 </body>
 </html>

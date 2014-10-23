@@ -15,11 +15,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Loja</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 <%@include file="menu.jsp" %>
-	<h1>Loja</h1>
-	<br><br>
+	<br>
+	<h2>Home</h2>
 	Compra realizada com sucesso.
 	<br><br><br>
 	<a href="index.jsp"><< Voltar</a>

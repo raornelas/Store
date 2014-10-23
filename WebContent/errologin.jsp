@@ -5,11 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Loja - Login</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 <%@include file="menu.jsp" %>
-<h1>Login</h1>
 <br>
+	<h2>Login</h2>
 Usuário não autenticado.
 <br><br>
 <a href="login.jsp"><< Voltar</a>	

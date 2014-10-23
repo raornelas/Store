@@ -1,8 +1,7 @@
-
-<table border="1" cellspacing="5" cellpadding="5">
-	<tr>
-		<td><a href="index.jsp" />Inicio</td>
-		<%
+<ul class="button-group">
+  <li><a href="index.jsp" class="button">HOME</a></li>
+  
+  <%
 			//Fazendo um casting para poder acessar a sessao
 			//HttpServletRequest httpResquest = (HttpServletRequest) request;
 			HttpSession sessao = request.getSession(false);
@@ -13,36 +12,38 @@
 
 			// Se usuário não estiver logado
 			if (usuario == null) {
-		%>
+	%>
+		
+  <li><a href="login.jsp" class="button">LOGIN</a></li>
+  <li><a href="registra.jsp" class="button">CADASTRO</a></li>
 
-		<td><a href="login.jsp" />Login</td>
-		<td><a href="registra.jsp" />Registrar</td>
+
+
 		<%
 			} else {
 				// Se usuário for administrador
 				if (usuario.equals("admin")) {
 		%>
-		<td><a href="gerencia_produtos.jsp" />Estoque</td>
-		<td><a href="historico_vendas.jsp" />Histórico</td>
-		<td><a href="logout.jsp" />Logout</td>
+		 <li><a href="gerencia_produtos.jsp" class="button"/>ESTOQUE</a></li>
+		 <li><a href="historico_vendas.jsp" class="button"/>HISTÓRICO</a></li>
+		 <li><a href="logout.jsp" class="button"/>LOGOUT</a></li>
 		<%
 			} else {
 					// Se for usuário normal
 		%>
-		<td><a href="historico_compras.jsp" />Histórico</td>
-		<td><a href="logout.jsp" />Logout</td>
+		<li><a href="historico_compras.jsp" class="button"/>HISTÓRICO</a></li>
+		 <li><a href="logout.jsp" class="button"/>LOGOUT</a></li>
+
 		<%
 			}
 				// Imprime nome do usuário
 				if (usuario != null) {
 		%>
 
-		<td><%=usuario%></td>
+		<li><a href="#" class="button secondary"><%=usuario%></a></li>
 		<%
 			}
 
 			}
 		%>
-	</tr>
-
-</table>
+</ul>

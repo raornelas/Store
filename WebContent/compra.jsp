@@ -19,12 +19,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Loja</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 <%@include file="menu.jsp" %>
-	<h1>Loja</h1>
 	<br>
-	<br>
+	<h2>Pedido</h2>
 	
 	<%
 	// Recupera produto na sessao
@@ -37,8 +37,9 @@
 	sessao.setAttribute("produto",produto);
 	
 	// Imprime nome do produto
+	%><h4><br><%
 	out.print(produto);	
-	
+	 %></h4><br><%
 	String pagamento="";
 
 	// Recupera método de pagamento da sessão
@@ -63,22 +64,22 @@
 	
 	
 	%>
-	<br><br>
+	
 	<form action="CompraController" method="post">
-	Quantidade<br>
-	<input type="text" name="quantidade" value="<%= quantidade%>"><br><br>
+	Quantidade
+	<input type="text" name="quantidade" value="<%= quantidade%>">
 	Pagamento<br>
 	<input type="radio" name="pagamento" value="credito">
 	Crédito 
 	
 	<input type="radio" name="pagamento" value="debito">
-	Débito<br><br>
-	
-	Cartão<br>
-	<input type="text" name="cartao" value="<%= cartao%>"><br><br>
-	Endereço<br>
-	<input type="text" name="endereco" value="<%= endereco%>"><br><br>
-	<input type="submit" value="Comprar"><br><br>
+	Débito
+	<br>
+	Cartão
+	<input type="text" name="cartao" value="<%= cartao%>">
+	Endereço
+	<input type="text" name="endereco" value="<%= endereco%>">
+	<input type="submit" value="Comprar" class="button">
 	</form>
 </body>
 </html>

@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Loja - Gerenciamento</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 <%@include file="menu.jsp" %>
-	<h1>Produtos</h1>
 	<br>
-	<h3>Adicionar novo produto</h3>
-	<br>
+	<h2>Novo</h2>
+	
 
 	<form action="ProdutoController" method="post">
 	Nome<br><input type="text" name="nome"><br>

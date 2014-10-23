@@ -20,20 +20,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Loja</title>
+<link rel="stylesheet" href="foundation.min.css">
 </head>
 <body>
 	<%@include file="menu.jsp"%>
-	<h1>Loja</h1>
 	<br>
-	<br>
-	<table border="1" cellpadding="5">
-		<tr bgcolor="#E0E0E0">
+	<h2>Home</h2>
+	<table>
+	<thead>
+		<tr class="title">
 			<th>Produto</th>
 			<th>Descrição</th>
 			<th>Preço</th>
 			<th>Estoque</th>
 			<th>Comprar</th>
 		</tr>
+		</thead>
 		<%
 			// Retira produto da sessão
 			sessao.setAttribute("produto", null);
@@ -62,11 +64,12 @@
 			<td><%=p.getDescricao()%></td>
 			<td><%=df.format(p.getPreco_unitario())%></td>
 			<td><%=p.getQtde_estoque()%></td>
-			<td><a href="compra.jsp?produto=<%=p.getNome()%>">Comprar</a></td>
+			<td><a href="compra.jsp?produto=<%=p.getNome()%>" class="label">Comprar</a></td>
 		</tr>
+		
 		<%
 			}
 		%>
-	
+</table>
 </body>
 </html>
